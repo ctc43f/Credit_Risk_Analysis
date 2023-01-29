@@ -31,3 +31,13 @@ Below are the Classification Reports from each of the mdoel types; these will be
 **Random Forest**
 
 ![Model 5](/Resources/balancedrandomforest.png)
+
+**Adaboost**
+
+![Model 6](/Resources/adaboost.png)
+
+## Summary
+
+A few observations:
+- All of the logistic regression models, regardless of sampling method, performed poorly relative to the two ensemble methods.  Accuracy and recall were lower for all four.  This implies that the decision boundary is non-linear and no linear model would perform well in this situation.
+- Of the two ensemble models, adaboost performed slightly better than random forest (when considering accuracy and recall)
