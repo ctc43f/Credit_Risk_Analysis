@@ -9,3 +9,25 @@ We were asked to utilize several different supervised machine learning models in
 We were asked to run six different models and compare their results.  The first four models were logistic regressions with various methods of oversampling and undersampling the data in order to balance the two target classes before modeling.  The last two were ensemble learning methods.  Below is a summary table of the results:
 
 ![Summary table](/Resources/summary.png)
+
+Below are the Classification Reports from each of the mdoel types; these will be more important in the Summary section.
+
+**Naive Random Oversampling**
+
+![Model 1](/Resources/lr_naive_random_oversampling.png)
+
+**SMOTE Oversampling**
+
+![Model 2](/Resources/lr_smote_oversampling.png)
+
+**Clustered Centroid Undersampling**
+
+![Model 3](/Resources/lr_cc_undersampling.png)
+
+**SMOTEEN Sampling**
+
+![Model 4](/Resources/lr_smoteen_undersampling.png)
+
+**Random Forest**
+
+![Model 5](/Resources/balancedrandomforest.png)
