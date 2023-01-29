@@ -40,4 +40,8 @@ Below are the Classification Reports from each of the mdoel types; these will be
 
 A few observations:
 - All of the logistic regression models, regardless of sampling method, performed poorly relative to the two ensemble methods.  Accuracy and recall were lower for all four.  This implies that the decision boundary is non-linear and no linear model would perform well in this situation.
-- Of the two ensemble models, adaboost performed slightly better than random forest (when considering accuracy and recall)
+- Of the two ensemble models, adaboost performed slightly better than random forest (when considering accuracy and recall).
+
+However, **I would not recommend using any of these models** for determining if someone should be allowed to have a loan.  For all six models, the precision when looking at just the high-risk category were all extremely low.  For example, if we look at AdaBoost model, the precision on high-risk individuals was 0.05.  In other words, only 5% of those observations it predicted would be high-risk (those that might default on a loan) were actually high risk.  Using this model, they would turn away a lot of individuals seeking loans that could generate revenue from interest.
+
+The model had 81 true positive high-risk predictions and 1,479 false positive high-risk predictions.  Let's assume a bank would lose $100K for every bad loan and would make $10K in interest on every good loan.  If the Bank would turn down all 1,560 individuals based on the model predictions, it would walk away from $6.7M in profit (it would make $14.8M on the good loans but lose $8.1M on bad loans).  In other words, **we can't determine which model is best until we know the cost to the organization of having a false positive versus a false negative** and can balance the model results accordingly.  
